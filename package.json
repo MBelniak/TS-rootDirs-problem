@@ -1,0 +1,7 @@
+{
+  "name": "TS-problem-repro",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
+}

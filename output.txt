@@ -1,0 +1,37 @@
+$ ../node_modules/typescript/bin/tsc  --traceResolution --noEmit
+======== Resolving module './settings' from 'work/TS-problem-repro/custom-src/index.ts'. ========
+Explicitly specified module resolution kind: 'NodeJs'.
+'rootDirs' option is set, using it to resolve relative module name './settings'.
+Checking if 'work/TS-problem-repro/custom-src/' is the longest matching prefix for 'work/TS-problem-repro/custom-src/settings' - 'true'.
+Checking if 'work/TS-problem-repro/src/' is the longest matching prefix for 'work/TS-problem-repro/custom-src/settings' - 'false'.
+Longest matching prefix for 'work/TS-problem-repro/custom-src/settings' is 'work/TS-problem-repro/custom-src/'.
+Loading 'settings' from the root dir 'work/TS-problem-repro/custom-src/', candidate location 'work/TS-problem-repro/custom-src/settings'.
+Loading module as file / folder, candidate module location 'work/TS-problem-repro/custom-src/settings', target file type 'TypeScript'.
+File 'work/TS-problem-repro/custom-src/settings.ts' does not exist.
+File 'work/TS-problem-repro/custom-src/settings.tsx' does not exist.
+File 'work/TS-problem-repro/custom-src/settings.d.ts' does not exist.
+Directory 'work/TS-problem-repro/custom-src/settings' does not exist, skipping all lookups in it.
+Trying other entries in 'rootDirs'.
+Loading 'settings' from the root dir 'work/TS-problem-repro/src', candidate location 'work/TS-problem-repro/src/settings'.
+Loading module as file / folder, candidate module location 'work/TS-problem-repro/src/settings', target file type 'TypeScript'.
+File 'work/TS-problem-repro/src/settings.ts' exist - use it as a name resolution result.
+======== Module name './settings' was successfully resolved to 'work/TS-problem-repro/src/settings.ts'. ========
+======== Resolving module './settings.ext' from 'work/TS-problem-repro/src/settings.ts'. ========
+Explicitly specified module resolution kind: 'NodeJs'.
+'rootDirs' option is set, using it to resolve relative module name './settings.ext'.
+Checking if 'work/TS-problem-repro/custom-src/' is the longest matching prefix for 'work/TS-problem-repro/src/settings.ext' - 'false'.
+Checking if 'work/TS-problem-repro/src/' is the longest matching prefix for 'work/TS-problem-repro/src/settings.ext' - 'true'.
+Longest matching prefix for 'work/TS-problem-repro/src/settings.ext' is 'work/TS-problem-repro/src/'.
+Loading 'settings.ext' from the root dir 'work/TS-problem-repro/src/', candidate location 'work/TS-problem-repro/src/settings.ext'.
+Loading module as file / folder, candidate module location 'work/TS-problem-repro/src/settings.ext', target file type 'TypeScript'.
+File 'work/TS-problem-repro/src/settings.ext.ts' exist - use it as a name resolution result.
+======== Module name './settings.ext' was successfully resolved to 'work/TS-problem-repro/src/settings.ext.ts'. ========
+index.ts:5:3 - error TS2322: Type '{ fieldA: string; fieldB: string; }' is not assignable to type 'SettingsModel'.
+  Object literal may only specify known properties, but 'fieldB' does not exist in type 'SettingsModel'. Did you mean to write 'fieldA'?
+
+5   fieldB: 'bbb'
+    ~~~~~~~~~~~~~
+
+
+Found 1 error.
+

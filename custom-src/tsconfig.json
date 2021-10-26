@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "*": ["../src/*", "../*"]
+        },
+        "moduleResolution": "node",
+        "module": "esnext",
+        "target": "esnext",
+        "noImplicitAny": false,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "jsx": "preserve",
+        "experimentalDecorators": true,
+        "rootDirs": [".", "../src"]
+    },
+    "include": ["**/*"]
+}
